@@ -46,11 +46,12 @@ public:
         cout<<"\n********* display end ******"<<endl;
     }
 private:
-    static const int defaultSize = 10;
+    static const int defaultSize=10;
     DataType* elements;
     int maxSize;
     int length;
 };
+
 
 template<typename DataType>
 bool SeqList<DataType>::insertElement(DataType data)

@@ -3,10 +3,11 @@
 #include <ctime>
 
 #include "SeqList.h"
+#include "LinkList.h"
 
 using namespace std;
 
-int main()
+void SeqListTest()
 {
     SeqList<int> list(10);
     for(int i=0; i<10; i++)
@@ -28,4 +29,19 @@ int main()
 
     list.changeElement(rand()%list.getLength(), rand());
     list.display();
+}
+
+void LinkListTest()
+{
+    LinkList<int>* list = new LinkList<int>;
+    list->append(1)->append(2)->append(3);
+    cout<<"length: "<<list->getLength()<<endl;
+    list->display();
+    delete list;
+}
+
+
+int main()
+{
+    LinkListTest();
 }

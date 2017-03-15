@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1489583153 source:g:\code\graduatedsa\graduatersa\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"SeqList.h"
+	"LinkList.h"
+
+1489570135 g:\code\graduatedsa\graduatersa\include\seqlist.h
+	<iostream>
+
+1489583260 g:\code\graduatedsa\graduatersa\include\linklist.h
+

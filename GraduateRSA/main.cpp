@@ -33,11 +33,15 @@ void SeqListTest()
 
 void LinkListTest()
 {
-    LinkList<int>* list = new LinkList<int>;
-    list->append(1)->append(2)->append(3);
-    cout<<"length: "<<list->getLength()<<endl;
-    list->display();
-    delete list;
+    LinkList<int> list ;
+    list.prepend(1).prepend(2).append(3);
+    list.insert(2,333);
+    cout<<"length: "<<list.getLength()<<endl;
+    list.display();
+    cout<<list.find(334)<<endl;
+    cout<<list.get(0)<<endl;
+    cout<<"set: "<<list.set(1,100)<<endl;
+    list.display();
 }
 
 

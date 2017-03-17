@@ -38,9 +38,12 @@ void LinkListTest()
     list.insert(2,333);
     cout<<"length: "<<list.getLength()<<endl;
     list.display();
-    cout<<list.find(334)<<endl;
+    cout<<list.indexOf(334)<<endl;
     cout<<list.get(0)<<endl;
     cout<<"set: "<<list.set(1,100)<<endl;
+    list.display();
+
+    list.remove(3);
     list.display();
 }
 

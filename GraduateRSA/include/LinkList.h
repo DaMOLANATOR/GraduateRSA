@@ -46,10 +46,12 @@ public:
     // insert a node after the location node
     // location is between [0,length]
     bool insert(int location, DataType newData);
+    bool remove(int location);
 
-    int find(DataType data) const;
+    int indexOf(DataType data) const;
     DataType get(int location) const;
     bool set(int location, DataType newData);
+
 
     void destroy();
 
@@ -60,6 +62,7 @@ public:
     void display() const
     {
         cout<<"******** display a LinkList *********\n";
+        cout<<"\t length: "<<length<<endl;
         LinkNode<DataType>* p = head;
         for(p=p->next; p!=NULL; p=p->next)
         {
@@ -140,7 +143,7 @@ void LinkList<DataType>::destroy()
 }
 
 template<typename DataType>
-int LinkList<DataType>::find(DataType data) const
+int LinkList<DataType>::indexOf(DataType data) const
 {
     LinkNode<DataType> *p;
     int index = 0;
@@ -167,5 +170,21 @@ bool LinkList<DataType>::set(int location, DataType newData)
     return true;
 }
 
+template<typename DataType>
+bool LinkList<DataType>::remove(int location)
+{
+    if(location<0 || location>=length) return false;
+    LinkNode<DataType> *p,*q;
+    p = head;
+    for(int i=0; i<location; i++)
+    {
+        p = p->next;
+    }
+    q = p->next;
+    p->next = q->next;
+    delete q;
+    length--;
+    return true;
+}
 
 #endif // LINKLIST_H_INCLUDED

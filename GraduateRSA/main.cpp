@@ -4,6 +4,7 @@
 
 #include "SeqList.h"
 #include "LinkList.h"
+#include "DoubleLinkList.h"
 
 using namespace std;
 
@@ -48,7 +49,14 @@ void LinkListTest()
 }
 
 
+void DoubleLinkListTest()
+{
+    DoubleLinkList<int> list;
+    list.prepend(1).prepend(2).append(3);
+    list.display();
+}
+
 int main()
 {
-    LinkListTest();
+    DoubleLinkListTest();
 }

@@ -1,13 +1,16 @@
 # depslib dependency file v1.0
-1489759676 source:g:\code\graduatedsa\graduatersa\main.cpp
+1489761497 source:g:\code\graduatedsa\graduatersa\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
 	"SeqList.h"
 	"LinkList.h"
+	"DoubleLinkList.h"
 
 1489570135 g:\code\graduatedsa\graduatersa\include\seqlist.h
 	<iostream>
 
-1489759709 g:\code\graduatedsa\graduatersa\include\linklist.h
+1489760939 g:\code\graduatedsa\graduatersa\include\linklist.h
+
+1489761661 g:\code\graduatedsa\graduatersa\include\doublelinklist.h
 
